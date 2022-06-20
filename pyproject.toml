@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "week_by_week"
+version = "3.14r.0"
+description = "This Library accept pandas dataframe, date_column and optional end date
+    If end date is not provide, current today will be use internally by the library
+    params:
+        df -> pandas dataframe
+        date_column -> a column in the dataframe which is of date(Timestamp) object
+        tested with virieties of date format, it use pd.to_datetime under the hood
+        end_date = last date to which week will be calculated
+        WK_start='Mon' default is 'Mon', it can be change to 'Sun' This signify 
+        the first day of the week
+
+
+    Required parameter are:
+    1. df -- pandas dataframe
+    2. timestamp -- date columnin your df
+    3. WK_start change between 'Mon' to 'Sun'
+    Optional parameter:
+        1. end_date
+
+    call ```getAllweeks()`` method to retrieve all weeks       
+    ```weeks = get_weeks.getAllweeks()```
+
+
+    And to retrieve data splitted into week range,
+    invoke ```getWeekData()``` 
+
+    `print(get_weeks.getWeekData())`"
+authors = ["Qamarudeen Muhammad <crescentgroup2000@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^1.4.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
