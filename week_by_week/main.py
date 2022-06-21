@@ -1,6 +1,7 @@
 from pandas import Timestamp
 import pandas as pd
 
+# df = pd.read_csv('./raw_events.csv')
 
 class WeekRange:
     ''''
@@ -99,8 +100,6 @@ class WeekRange:
 
 
     def getWeekData(self):
-        # TO DO
-        # Return a weekly Pandas Dataframe data in future release
         all_week_range = self.getAllweeks()
         dataDict = dict()
         for week_range  in all_week_range:
@@ -114,18 +113,39 @@ class WeekRange:
         return dataDict
 
 
+    def retunpandasDF(self):
+        '''
+        Return each week dataframe when the method is invoke
+        
+        '''
+        data = self.getWeekData()
+        df = pd.DataFrame()
+        key_list = list(data.keys())
+        counter = 0 
+        num_week = len(key_list)
+        while counter < num_week:
+            # print(key_list[counter])
+            values = data.get(key_list[counter])
+            df[[self.df_columns[0], self.df_columns[1], self.df_columns[2]]] = \
+                values
+            
+            yield df
+            df = df[0:0] # Clear previous week data
+            counter += 1
+        
 
 
 
     # TODO 
-    # 1. Return a weekly Pandas Dataframe data in 
+    # 1. 
 
 
-# get_weeks = WeekRange(df, 'timestamp','2022/06/01', WK_start='sun')
+get_weeks = WeekRange(df, 'timestamp','2022/06/01', WK_start='sun')
 # weeks = get_weeks.getAllweeks()
 
 
 
-# print(get_weeks.getWeekData())
-# for week in weeks:
+data = get_weeks.retunpandasDF()
+print(next(data))
+# for week in get_weeks.retunpandasDF():
 #     print(week)
