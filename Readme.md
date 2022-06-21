@@ -4,6 +4,11 @@ is attempt to have Python library that
    data point date to the current or a given date
 2. Group pandas row into weekly base on the date/timestamp column
 
+# Release Log
+1.  week-by-week  version 3.14.0a0 (Released, June 21, 2022) Weekfly Dataframe capability added
+2.  week-by-week  version 3.14.0 (Released, June 20, 2022)
+
+
 # Usage after installation
 ```from week_by_week import WeekRange```
 

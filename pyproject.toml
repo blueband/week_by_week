@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "week_by_week"
-version = "3.14.0"
+version = "3.14.0a"
 description = "This Library accept pandas dataframe, date_column and optional end date If end date is not provide, current today will be use internally by the library"
 authors = ["Qamarudeen Muhammad <qamarudeen.m@gmail.com>"]
 # New attributes
