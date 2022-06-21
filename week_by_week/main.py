@@ -140,12 +140,10 @@ class WeekRange:
     # 1. 
 
 
-get_weeks = WeekRange(df, 'timestamp','2022/06/01', WK_start='sun')
-# weeks = get_weeks.getAllweeks()
+# get_weeks = WeekRange(df, 'timestamp','2022/06/01', WK_start='sun')
+# # weeks = get_weeks.getAllweeks()
 
 
 
-data = get_weeks.retunpandasDF()
-print(next(data))
-# for week in get_weeks.retunpandasDF():
-#     print(week)
+# # for week in get_weeks.retunpandasDF():
+# #     print(week)

@@ -27,4 +27,13 @@ invoke ```getWeekData()```
 `print(get_weeks.getWeekData())`
 
 
+To retrieved Pandas Dataframe splited into week
+invoke the following interface method 
+```
+for week in get_weeks.retunpandasDF():
+    print(week)
+
+```
+
+
 
