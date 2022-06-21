@@ -1,8 +1,6 @@
 from pandas import Timestamp
 import pandas as pd
 
-# df = pd.read_csv('./raw_events.csv')
-
 class WeekRange:
     ''''
     This Library accept pandas dataframe, date_column and optional end date
