@@ -5,8 +5,10 @@ is attempt to have Python library that
 2. Group pandas row into weekly base on the date/timestamp column
 
 # Release Log
-1.  week-by-week  version 3.14.0a0 (Released, June 21, 2022) Weekfly Dataframe capability added
-2.  week-by-week  version 3.14.0 (Released, June 20, 2022)
+1. week-by-week  version 3.14.0b0 (Released, June 22, 2022) fix Supported Python issues, =>3.8, <4.0
+
+2.  week-by-week  version 3.14.0a0 (Released, June 21, 2022) Weekfly Dataframe capability added
+3.  week-by-week  version 3.14.0 (Released, June 20, 2022)
 
 
 # Usage after installation
